@@ -1,0 +1,194 @@
+/* --- Design Framework Settings --- */
+:root {
+    --primary-fire: #ff3e00;     /* Intense Neon Red-Orange */
+    --pitch-black: #0b0b0c;      /* Immersive Dark Background */
+    --card-gray: #161618;        /* Matte Dark Surface */
+    --text-white: #ffffff;
+    --text-muted: #a1a1aa;
+    --font-display: 'Syne', sans-serif; /* Massive, modern structural font */
+    --font-body: 'Inter', sans-serif;     /* Clean, neutral geometric font */
+}
+
+/* --- Base Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--pitch-black);
+    color: var(--text-white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Clean Modern Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 8%;
+    background-color: rgba(11, 11, 12, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #27272a;
+}
+
+.navbar .logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-left: 2.5rem;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text-white);
+}
+
+/* --- High-Impact Hero Layout (Direct Web Fetch Image) --- */
+.hero {
+    background: linear-gradient(to right, rgba(11, 11, 12, 0.9) 40%, rgba(11, 11, 12, 0.3)), 
+                url('https://unsplash.com') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-content {
+    max-width: 650px;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: 5.5rem;
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .highlight {
+    color: var(--primary-fire);
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--text-white);
+    color: var(--pitch-black);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--primary-fire);
+    color: var(--text-white);
+    transform: translateY(-2px);
+}
+
+/* --- Content & Product Grid --- */
+.container {
+    padding: 6rem 8% 8rem 8%;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 4rem;
+    text-align: left;
+    border-left: 5px solid var(--primary-fire);
+    padding-left: 1.5rem;
+}
+
+.burger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.burger-card {
+    background-color: var(--card-gray);
+    border: 1px solid #27272a;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+}
+
+.burger-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-fire);
+}
+
+/* Image zoom viewport wrapper */
+.img-wrapper {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.burger-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.burger-card:hover img {
+    transform: scale(1.08);
+}
+
+.card-info {
+    padding: 2rem;
+}
+
+.burger-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.burger-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- Dark Minimal Footer --- */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.85rem;
+    color: #52525b;
+    border-top: 1px solid #18181b;
+}
+
