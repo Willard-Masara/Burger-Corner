@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | The Food Court</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root { --fire: #ff3e00; --bg: #0b0b0c; --white: #fff; --gray: #a1a1aa; --card: #161618; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--white); -webkit-font-smoothing: antialiased; }
+        .navbar { display: flex; justify-content: space-between; padding: 2rem 8%; border-bottom: 1px solid #27272a; }
+        .navbar .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-weight: 600; margin-left: 2.5rem; font-size: 0.85rem; }
+        .nav-links a:hover, .nav-links a.active { color: var(--white); }
+        .hero { padding: 4rem 8%; }
+        .hero h1 { font-family: 'Syne', sans-serif; font-size: 4.5rem; font-weight: 800; }
+        .hero span { color: var(--fire); }
+        .form-container { padding: 0 8% 6rem 8%; max-width: 700px; }
+        .feed-form { background: var(--card); border: 1px solid #27272a; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .form-group label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; color: var(--white); }
+        .form-group input, .form-group textarea { background: var(--bg); border: 1px solid #27272a; padding: 1rem; color: var(--white); font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--fire); }
+        .submit-btn { background: var(--white); color: var(--bg); border: none; padding: 1rem; font-family: 'Inter', sans-serif; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; cursor: pointer; transition: 0.2s; }
+        .submit-btn:hover { background: var(--fire); color: var(--white); }
+        footer { text-align: center; padding: 2.5rem; font-size: 0.8rem; color: #52525b; border-top: 1px solid #18181b; }
+        @media(max-width:600px){.hero h1{font-size:3rem;}.nav-links a{margin-left:1.2rem;}.form-container{padding: 0 4% 4rem 4%;}}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">THE FOOD COURT</div>
+        <div class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="menu.html">MENU</a>
+            <a href="feedback.html" class="active">FEEDBACK</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>TALK TO <span>US.</span></h1>
+    </header>
+
+    <main class="form-container">
+        <!-- Form configured without JS, ready for standard backend integration -->
+        <form action="#" method="POST" class="feed-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="e.g. Sipho">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="message">What's the verdict?</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your experience..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Food Court. Designed by Bonginkosi.</p>
+    </footer>
+
+</body>
+</html>
+
