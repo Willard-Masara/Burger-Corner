@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | The Food Court</title>
+    <!-- Importing premium modern fonts (Syne & Inter) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <style>
+        /* --- Core Design Framework Variables --- */
+        :root {
+            --primary-fire: #ff3e00;     /* Intense Neon Red-Orange */
+            --pitch-black: #0b0b0c;      /* Base Dark Neutral */
+            --text-white: #ffffff;
+            --text-muted: #a1a1aa;
+            --font-display: 'Syne', sans-serif; /* Massive, structural display font */
+            --font-body: 'Inter', sans-serif;     /* Clean, geometric body font */
+        }
+
+        /* --- Structural Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            
+            /* Pure CSS Twilight Gradient with Layered Star Clusters */
+            background: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+                linear-gradient(to bottom, #06060c 0%, #0b0b0c 60%, #170b05 100%);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 100% 100%;
+            background-position: 0 0, 40px 60px, 130px 270px, 0 0;
+            background-attachment: fixed;
+        }
+
+        /* --- Premium Navigation --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 8%;
+            background-color: rgba(6, 6, 12, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1f1f23;
+        }
+
+        .navbar .logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-left: 2.5rem;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-white);
+        }
+
+        /* --- Deep Evening Header --- */
+        .about-hero {
+            height: 45vh;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background: linear-gradient(to bottom, rgba(6, 6, 12, 0.1), rgba(11, 11, 12, 0.95));
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: 5.5rem;
+            line-height: 0.95;
+            font-weight: 800;
+            letter-spacing: -3px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content .highlight {
+            color: var(--primary-fire);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 500px;
+        }
+
+        /* --- Layout Container & Manicured Content --- */
+        .container {
+            padding: 4rem 8% 8rem 8%;
+        }
+
+        .story-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 3.5rem;
+            border-left: 5px solid var(--primary-fire);
+            padding-left: 1.5rem;
+        }
+
+        /* Shaped and structural text blocks */
+        .story-paragraph {
+            font-size: 1.15rem;
+            line-height: 2.1;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            text-align: justify;
+            text-justify: inter-word;
+            letter-spacing: 0.4px;
+        }
+
+        /* Editorial Drop-Cap */
+        .story-paragraph::first-letter {
+            font-family: var(--font-display);
+            font-size: 3.8rem;
+            float: left;
+            margin-right: 0.8rem;
+            line-height: 0.85;
+            color: var(--primary-fire);
+            font-weight: 800;
+        }
+
+        /* Clean sign-off block */
+        .story-signature {
+            font-family: var(--font-display);
+            color: var(--text-white);
+            font-weight: 800;
+            font-size: 1.8rem;
+            letter-spacing: -1px;
+            margin-top: 3.5rem;
+            border-top: 1px solid #27272a;
+            padding-top: 2rem;
+            display: inline-block;
+        }
+
+        .story-signature span {
+            color: var(--primary-fire);
+        }
+
+        /* --- Minimalist Dark Footer --- */
+        footer {
+            background-color: #050507;
+            text-align: center;
+            padding: 3rem;
+            font-size: 0.85rem;
+            color: #4b4b52;
+            border-top: 1px solid #131316;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Clean Navbar -->
+    <nav class="navbar">
+        <div class="logo">THE FOOD COURT</div>
+        <div class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html" class="active">ABOUT</a>
+            <a href="menu.html">MENU</a>
+            <a href="feedback.html">FEEDBACK</a>
+        </div>
+    </nav>
+
+    <!-- Ultra-Bold Sub-Hero / Evening Header -->
+    <header class="about-hero">
+        <div class="hero-content">
+            <h1>OUR <span class="highlight">STORY.</span></h1>
+            <p>Where late night cravings meet high-impact street culinary concepts.</p>
+        </div>
+    </header>
+
+    <!-- About Main Content Space -->
+    <main class="container">
+        <section class="story-wrapper">
+            <h2 class="section-title">STREET KULTUR</h2>
+            
+            <!-- Beautifully manicured narrative blocks -->
+            <p class="story-paragraph">
+                We specialize in mingling American cuisine with Street Kultur! We are unapologetic 
+                in our efforts to scintillate your taste buds, breaking down the traditional barriers 
+                of dining to bring you raw, high-impact comfort food. What started as a late-night 
+                obsession with the perfect sear has evolved into a sanctuary for flavor purists who 
+                demand food that is loud, authentic, and structural.
+            </p>
+
+            <p class="story-paragraph">
+                Every single item that leaves our kitchen is a masterclass in balance—marrying the 
+                nostalgic, rich essence of classic American fast-casual staples with the bold, 
+                experimental edge of modern global street currents. We don't just make meals; 
+                we curate midnight experiences under the neon glow.
+            </p>
+
+            <!-- Styled Signature Block -->
+            <div class="story-signature">
+                With love<span>!</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Unified Footer -->
+    <footer>
+        <p>&copy; 2026 The Food Court. Designed by Bonginkosi.</p>
+    </footer>
+
+</body>
+</html>
+
