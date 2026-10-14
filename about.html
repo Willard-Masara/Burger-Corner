@@ -27,6 +27,17 @@
             padding: 0;
             box-sizing: border-box;
         }
+        h1::after{
+        content:"";
+        background-color:var(--primary-fire);
+       
+        display:inline-block;
+        width:10px;
+        height:10px;
+        margin-left:10px;
+        
+        
+      }
 
         body {
             font-family: var(--font-body);
@@ -215,7 +226,7 @@ transform:rotate(180deg);
     <!-- Ultra-Bold Sub-Hero / Evening Header -->
     <header class="about-hero">
         <div class="hero-content">
-            <h1>OUR <span class="highlight">STORY</span>.</h1>
+            <h1>OUR <span class="highlight">STORY</span></h1>
             <p>Where late night cravings meet high-impact street culinary concepts.</p>
         </div>
     </header>
